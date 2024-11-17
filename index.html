@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task Manager</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Менеджер задач</h1>
-    <form id="task-form">
-      <input type="text" id="task-title" placeholder="Заголовок" required>
-      <textarea id="task-description" placeholder="Описание"></textarea>
-      <select id="task-type">
-        <option value="default">Обычная</option>
-        <option value="deadline">С дедлайном</option>
-        <option value="responsible">Ответственная</option>
-        <option value="location">С местом</option>
-      </select>
-      <input type="date" id="task-deadline" style="display: none;">
-      <input type="text" id="task-responsible" placeholder="Ответственный" style="display: none;">
-      <input type="text" id="task-location" placeholder="Место" style="display: none;">
-      <button type="submit">Добавить задачу</button>
-    </form>
-    <div id="filter-section">
-      <h3>Фильтры</h3>
-      <select id="filter-status">
-        <option value="">Все</option>
-        <option value="pending">Невыполненные</option>
-        <option value="done">Выполненные</option>
-      </select>
-      <select id="filter-type">
-        <option value="">Все</option>
-        <option value="default">Обычная</option>
-        <option value="deadline">С дедлайном</option>
-        <option value="responsible">Ответственная</option>
-        <option value="location">С местом</option>
-      </select>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Менеджер задач</h1>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Заголовок" required />
+        <textarea id="task-description" placeholder="Описание"></textarea>
+        <select id="task-type">
+          <option value="default">Обычная</option>
+          <option value="deadline">С дедлайном</option>
+          <option value="responsible">Ответственная</option>
+          <option value="location">С местом</option>
+        </select>
+        <input type="date" id="task-deadline" style="display: none" />
+        <input
+          type="text"
+          id="task-responsible"
+          placeholder="Ответственный"
+          style="display: none"
+        />
+        <input
+          type="text"
+          id="task-location"
+          placeholder="Место"
+          style="display: none"
+        />
+        <button type="submit">Добавить задачу</button>
+      </form>
+      <div id="filter-section">
+        <h3>Фильтры</h3>
+        <select id="filter-status">
+          <option value="">Все</option>
+          <option value="pending">Невыполненные</option>
+          <option value="done">Выполненные</option>
+        </select>
+        <select id="filter-type">
+          <option value="">Все</option>
+          <option value="default">Обычная</option>
+          <option value="deadline">С дедлайном</option>
+          <option value="responsible">Ответственная</option>
+          <option value="location">С местом</option>
+        </select>
+      </div>
+      <div id="tasks-container"></div>
     </div>
-    <div id="tasks-container"></div>
-  </div>
-  <script src="./dist/app.js" type="module"></script>
-</body>
+    <script src="./dist/app.js" type="module"></script>
+  </body>
 </html>
